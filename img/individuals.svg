@@ -1,0 +1,16 @@
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>
+        Group 8
+    </title>
+    <defs>
+        <circle id="a" cx="10" cy="10" r="10"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#6A81DF" xlink:href="#a"/>
+        <circle fill="#FFF" opacity=".4" mask="url(#b)" cx="15.5" cy="2.5" r="7.5"/>
+        <circle fill="#FFF" opacity=".4" mask="url(#b)" cx="6.5" cy="13.5" r="2.5"/>
+    </g>
+</svg>

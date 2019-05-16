@@ -1,0 +1,9 @@
+<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Group 11
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <circle fill="#D43630" opacity=".1" cx="15" cy="15" r="15"/>
+        <path fill="#D4362E" fill-rule="nonzero" d="M18.08 20l-.014-5.88-2.884 4.844H14.16l-2.87-4.718V20H9.162v-9.8h1.876l3.668 6.09 3.612-6.09h1.862l.028 9.8z"/>
+    </g>
+</svg>
