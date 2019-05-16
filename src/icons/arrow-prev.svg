@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Path Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Главная" transform="translate(-1010.000000, -1221.000000)" fill="#9799A5" fill-rule="nonzero">
+            <g id="Group-24" transform="translate(365.000000, 1212.000000)">
+                <g id="Group-23">
+                    <g id="Group-22" transform="translate(529.000000, 6.000000)">
+                        <path d="M125.556721,14.7205927 C125.231461,15.0128829 124.60773,15.1335429 124.24419,14.7955927 C123.88608,14.4627425 123.89673,13.8172021 124.25349,13.4830318 L127.628612,9.9015995 L116.900031,9.9015995 C116.40299,9.9015995 116,9.49863923 116,9.00156891 C116,8.50449858 116.40299,8.10154732 116.900031,8.10154732 L127.628612,8.10154732 L124.25349,4.52011497 C123.94635,4.21246476 123.88959,3.54421433 124.24419,3.20755411 C124.59867,2.87092388 125.244811,2.97847396 125.556721,3.28258415 L130.356904,8.3827885 C130.697134,8.80362878 130.664554,9.20472904 130.356904,9.62034931 L125.556721,14.7205927 Z" id="Path-Copy" transform="translate(123.300006, 9.000000) scale(-1, 1) translate(-123.300006, -9.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

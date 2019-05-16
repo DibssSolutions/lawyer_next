@@ -1,0 +1,42 @@
+.service
+	padding: 15px 15px 30px
+	height: 100%
+	border-radius: 4px
+	align-items: center
+	text-align: center
+	flex-direction: column
+	box-shadow: 0 4px 30px -5px rgba(227,230,245,0.50)
+	background: $white
+	display: flex
+	+sm
+		padding: 15px 15px 18px
+	br
+		+md
+			display: none
+	&__icon
+		margin-bottom: 20px
+		width: 60px
+		height: 60px
+		font-size: 0
+		border-radius: 12px
+		justify-content: center
+		align-items: center
+		background-color: rgba($blue, .1)
+		display: flex
+		+sm
+			margin-bottom: 13px
+		.icon
+			font-size: 24px
+			line-height: 1
+			color: $blue
+	&__title
+		width: 100%
+		+fnssc
+		+f(18px,900,1.44)
+		letter-spacing: 0.06em
+		flex-grow: 1
+		align-items: center
+		justify-content: center
+		display: flex
+		+sm
+			font-size: 16px

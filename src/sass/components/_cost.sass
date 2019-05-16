@@ -1,0 +1,48 @@
+.cost
+	padding: 35px 25px
+	+f(16px,500,1.875)
+	background-color: $white
+	box-shadow: 0 20px 40px -15px #E3E6F5
+	border-radius: 8px
+	+sm
+		padding: 25px 15px
+	&__field
+		align-items: center
+		display: flex
+		+sm
+			flex-wrap: wrap
+		&:not(:first-child)
+			margin-top: 30px
+			+sm
+				margin-top: 14px
+				padding-top: 22px
+				border-top: 1px solid #EBEDF8
+	&__text
+		+fns
+		+f(16px,900,1.5625)
+		letter-spacing: 0.025em
+		+fs(52%)
+		padding-right: 10px
+		+sm
+			margin-bottom: 5px
+			padding-right: 0
+			+fs(100%)
+			font-size: 14px
+	&__time
+		padding-right: 10px
+		+fs(20%)
+		text-align: center
+		color: $textColor
+		+sm
+			+fs(50%)
+			order: 3
+			font-size: 14px
+			text-align: right
+	&__tot
+		+fs(28%)
+		font-weight: 600
+		text-align: right
+		color: $blue
+		+sm
+			+fs(50%)
+			text-align: left

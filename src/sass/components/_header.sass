@@ -1,0 +1,258 @@
+.header
+	background-color: $white
+	+md
+		background-color: #F8F9FF
+	&_abs
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+	&_white
+		color: $white
+		background-color: transparent
+		+md
+			background: transparent
+	&__top-sm
+		padding: 10px
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+		display: none
+		+sm
+			display: flex
+	&__top
+		position: relative
+		z-index: 2
+		padding: 32px 0 30px
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		display: flex
+		+md
+			padding: 16px 0
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: -30px
+			bottom: 0
+			right: -30px
+			background-color: $white
+			display: none
+			z-index: -1
+			+md
+				display: block
+			+sm
+				left: -14px
+				right: -14px
+			.header_white &
+				background-color: transparent
+	&__center
+		padding: 0 20px
+		margin-left: 8%
+		align-items: center
+		flex-wrap: wrap
+		display: flex
+		+lg
+			margin-left: 0
+		+sm
+			padding: 0
+			order: 1
+			// margin-right: auto
+	&__search
+		+sm
+			order: 2
+			margin-right: 15px
+			margin-left: auto
+	&__btn-md
+		margin-top: 30px
+		display: none
+		+md
+			display: block
+	&__right
+		+sm
+			order: 3
+	&__phone,
+	&__mail
+		color: currentColor
+		+f(16px,700,1.4)
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: currentColor
+		+md
+			font-size: 12px
+		+sm
+			font-size: 10px
+			font-weight: 500
+	&__logo,
+	&__phone,
+	&__mail
+		&:not(:first-child)
+			margin-left: 50px
+			+md
+				margin-left: 30px
+	&__logo
+		&:not(:first-child)
+			+sm
+				margin-left: 0
+	&__bottom
+		padding: 18px 0 26px
+		+md
+			position: absolute
+			top: 67px
+			left: 0
+			padding: 30px
+			width: 100%
+			height: calc(100vh - 67px)
+			z-index: 1
+			overflow: auto
+			background-color: #f8f9ff
+			visibility: hidden
+			opacity: 0
+			transition: visibility .3s, opacity .3s
+			.is-open-menu &
+				opacity: 1
+				visibility: visible
+		+sm
+			top: 102px
+			height: calc(100vh - 102px)
+		&:not(:first-child)
+			border-top: 1px solid rgba(#C1C2C9, .2)
+			+md
+				border: none
+		.header_white &
+			+md
+				background-color: #000
+	&__section
+		padding: 20px 15px 30px
+		box-shadow: 0 10px 30px -5px #E3E6F5
+		border-radius: 6px
+		background-color: $white
+		display: none
+		+md
+			display: block
+		.header_white &
+			box-shadow: none
+	&__page
+		margin-bottom: 30px
+		+f(16px,600,1.18)
+		color: $mainColor
+.search
+	position: relative
+	font-size: 0
+	&__btn
+		width: 50px
+		height: 50px
+		line-height: 48px
+		text-align: center
+		border-radius: 6px
+		font-size: 0
+		color: currentColor
+		background-color: transparent
+		border: 1px solid
+		display: inline-block
+		+md
+			height: 35px
+			width: 35px
+			line-height: 35px
+		+sm
+			background-color: #F8F9FF
+		.header_white &
+			background-color: transparent
+		.icon
+			font-size: 14px
+			vertical-align: middle
+			display: inline-block
+			+md
+				font-size: 10px
+.logo
+	width: 217px
+	vertical-align: top
+	display: inline-block
+	+md
+		width: 130px
+	h1
+		display: none
+	img
+		max-width: 100%
+		display: block
+
+.nav
+	font-weight: 600
+	&__list
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-around
+		display: flex
+	&__item,
+	li
+		padding: 0 5px
+	&__link,
+	a
+		color: $textColor
+		transition: color .3s
+		+hover
+			color: $mainColor
+		.header_white &
+			+hover
+				color: $white
+		&.is-active
+			color: $mainColor
+			.header_white &
+				color: $white
+
+.btn-menu
+	position: relative
+	width: 35px
+	height: 35px
+	border-radius: 4px
+	border: 1px solid
+	color: currentColor
+	transition: color .3s, border-color .3s, background-color .3s
+	background-color: transparent
+	display: none
+	+md
+		vertical-align: top
+		display: inline-block
+	+hover
+		color: $white
+		background-color: $blue
+	.is-open-menu &
+		color: $white
+		background-color: $blue
+	&__line
+		position: absolute
+		width: 12px
+		left: 50%
+		margin-left: -6px
+		border-bottom: 1px solid
+		transition: transform .3s, opacity .3s, margin-left .3s
+		backface-visibility: hidden
+		will-change: transform
+		.is-open-menu &
+			margin-left: -4px
+		&:first-child
+			top: 12px
+			transform-origin: top left
+			.is-open-menu &
+				transform: rotate(45deg)
+		&:nth-child(2)
+			top: 16px
+			.is-open-menu &
+				opacity: 0
+				transform: scaleX(0)
+		&:nth-child(3)
+			top: 20px
+			transform-origin: bottom left
+			.is-open-menu &
+				transform: rotate(-45deg)
+
+.header-link
+	color: #9799A5
+	+f(16px,600,1.18)
+	transition: color .3s
+	+hover
+		color: #6A81DF
+	.accordion_header.is-open &
+		color: #6A81DF

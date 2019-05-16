@@ -4,47 +4,239 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
 
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
-
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# checkbox exepmle #}
-	<p>{{ mixins.checkbox() }}</p>
-	<p>
-		{{ mixins.checkbox({
-			checked: true,
-			name: 'exemple-name',
-			text: 'checkbox-checked'
-		}) }}
-	</p>
-	{# radio exepmle #}
-	{{ mixins.checkbox({
-		name: 'exemple-name',
-		text: 'text',
-		radio: true
+	{{ header.block({ 
+		class: 'header_abs header_white',
+		logoImg: 'logo-white.png'
 	}) }}
-	
-
-	{# breadcrumbs exepmle #}
-	{{ mixins.breadcrumbs({
-		list: ['Главная','Внутренняя','Корзина']
-	}) }}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
+	<!-- begin hero -->
+	<div class="hero" style="background-image: url(./img/hero-bg.png)">
+		<div class="hero__inner inner">
+			<div class="hero__left">
+				<h1 class="title-lg">Московский правовой центр вектор</h1>
+			</div>
+			<div class="hero__right">
+				<div class="hero__text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis dasd montes, nascetur
+				</div>
+				<div class="hero__footer">
+					<h2 class="title-md">Мелконян Давид Араикович</h2>
+					<p>Генеральный директор МПЦ “Вектор”</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end hero -->
+	<div class="inner">
+		<!-- begin wrap -->
+		<div class="wrap">
+			{{ leftBar.block([
+				{
+					open: true,
+					title: 'Физические лица',
+					icon: 'individuals.svg',
+					list: ['Жилищные споры','Семейные споры','Возврат долгов','Спор с застройщиком','Адвокат по ДТП', 'Споры по недвижимости', 'Практика']
+				},
+				{
+					title: 'Юридические лица',
+					icon: 'legal-entities.svg',
+					list: ['Link']
+				},
+				{
+					open: true,
+					title: 'Доп услуги',
+					icon: 'additional-services.svg',
+					list: ['Подбор кадров','Бюро переводов','Судебные курьеры','Проведение экспертиз','Детекция лжи и полиграфологи','Бухгалтерия и аудит']
+				}
+			]) }}
+			<div class="col-main">
+				<!-- begin infobanner -->
+				<div class="infobanner">
+					<div class="infobanner__img" style="background-image: url(./img/infobanner.png);"></div>
+					<div class="infobanner__left">
+						<div class="infobanner__inner">
+							<div class="infobanner__title title">Входим <span class="text-blue text-uppercase">В ТОП 10</span> юридических фирм Москвы</div>
+							<div class="infobanner__row row">
+								<div class="infobanner__col col col-6">
+									<div class="infobanner__numb">5</div>
+									<div class="infobanner__text">Офисов в Москве</div>
+								</div>
+								<div class="infobanner__col col col-6">
+									<div class="infobanner__numb"><span class="infobanner__numb-text">более </span>5000</div>
+									<div class="infobanner__text">Офисов в Москве</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end infobanner -->
+				<!-- begin section -->
+				<div class="section">
+					<!-- begin slider -->
+					<div class="slider js-slider">
+						<div class="slider__head">
+							<div class="slider__left">
+								<h3 class="title-sm">Отзывы</h3>
+							</div>
+							<div class="slider__right">
+								<a href="#" class="simple-link">Все отзывы</a>
+								<div class="slider__arrows">
+									<button class="slider__prev js-slider-prev" type="button">{{ mixins.icon('arrow-prev') }}</button>
+									<button class="slider__next js-slider-next" type="button">{{ mixins.icon('arrow-next') }}</button>
+								</div>
+							</div>
+						</div>
+						<div class="slider__container js-slider-container">
+							{% for i in range(0,8) %}
+						    <div class="slider__slide">
+						    	{{ mixins.review() }}
+						    </div>
+							{% endfor %}
+						</div>
+					</div>
+					<!-- end slider -->
+				</div>
+				<!-- end section -->
+				<!-- begin section -->
+				<div class="section">
+					<!-- begin slider -->
+					<div class="slider js-slider">
+						<div class="slider__head">
+							<div class="slider__left">
+								<h3 class="title-sm">Адвокаты</h3>
+							</div>
+							<div class="slider__right">
+								<a href="#" class="simple-link">Все адвокаты</a>
+								<div class="slider__arrows">
+									<button class="slider__prev js-slider-prev" type="button">{{ mixins.icon('arrow-prev') }}</button>
+									<button class="slider__next js-slider-next" type="button">{{ mixins.icon('arrow-next') }}</button>
+								</div>
+							</div>
+						</div>
+						<div class="slider__container js-slider-container">
+							{% for i in range(0,5) %}
+							<div class="slider__slide">
+								{{ mixins.card() }}
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<!-- end slider -->
+				</div>
+				<!-- end section -->
+				<!-- begin section -->
+				<div class="section">
+					<!-- begin slider -->
+					<div class="slider js-slider">
+						<div class="slider__head">
+							<div class="slider__left">
+								<h3 class="title-sm">Дела</h3>
+							</div>
+							<div class="slider__right">
+								<a href="#" class="simple-link">Все дела</a>
+								<div class="slider__arrows">
+									<button class="slider__prev js-slider-prev" type="button">{{ mixins.icon('arrow-prev') }}</button>
+									<button class="slider__next js-slider-next" type="button">{{ mixins.icon('arrow-next') }}</button>
+								</div>
+							</div>
+						</div>
+						<div class="slider__container js-slider-container" data-slider-show="2">
+							{% for i in range(1,5) %}
+							<div class="slider__slide">
+								{{ mixins.caseСard() }}
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<!-- end slider -->
+				</div>
+				<!-- end section -->
+				<!-- begin section -->
+				<div class="section">
+					<!-- begin slider -->
+					<div class="slider slider_service js-slider">
+						<div class="slider__head">
+							<div class="slider__left">
+								<h3 class="title-sm">Доп услуги</h3>
+							</div>
+							<div class="slider__right">
+								<a href="#" class="simple-link">Все доп услуги</a>
+								<div class="slider__arrows">
+									<button class="slider__prev js-slider-prev" type="button">{{ mixins.icon('arrow-prev') }}</button>
+									<button class="slider__next js-slider-next" type="button">{{ mixins.icon('arrow-next') }}</button>
+								</div>
+							</div>
+						</div>
+						<div class="slider__container js-slider-container">
+							{% for i in range(0,5) %}
+							<div class="slider__slide">
+								<!-- begin service -->
+								<div class="service">
+									<div class="service__icon">
+										{{ mixins.icon('combined') }}
+									</div>
+									<div class="service__title">
+										<div class="service__title-inner">Подбор кадров</div>
+									</div>
+								</div>
+								<!-- end service -->
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<!-- end slider -->
+				</div>
+				<!-- end section -->
+			</div>
+			<div class="col-right">
+				<div class="sidebar">
+					{{ mixins.callback() }}
+					<div class="sidebar__group">
+						<h4 class="sidebar__title title-sm">Какие проблемы решаем:</h4>
+						<div class="links">
+							{% for text in ['Я развожусь и делю имущество','Я получаю наследство','Я обращаюсь в арбитраж','Я ответчик в суде'] %}
+							<a href="#" class="link">{{ text }}{{ mixins.icon('arrow') }}</a>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="sidebar__group">
+						<h4 class="sidebar__title title-sm">Лента пресс центра</h4>
+						{% for item in [{
+							img: 'simple-news-img-1.jpg',
+							tag: 'новость',
+							data: '18.02.2019',
+							title: 'Интервью генерального директора МПЦ «Вектор» на информационно-правовом портале «Право.ru»'
+						}, {
+							img: 'simple-news-img-2.jpg',
+							tag: 'новость',
+							data: '18.02.2019',
+							title: 'Интервью генерального директора МПЦ «Вектор» на информационно-правовом портале «Право.ru»'
+						}] %}
+						<div class="sidebar__field">
+						    {{ mixins.simpleNews({
+						    	img: item.img,
+						    	tag: item.tag,
+						    	data: item.data,
+								title: item.title
+						    }) }}
+						</div>
+						{% endfor %}
+						{% for i in range(0,2) %}
+						<div class="sidebar__field">
+							{{ mixins.comment({
+								img: 'comment-img-1.png',
+								name: 'Иван',
+								title: 'Скандальное дело в Люберецком Суде'
+							})}}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end wrap -->
+	</div>
+	{% include "partials/_form.html" %}
+	{% include "partials/_footer.html" %}
 
 {% endblock %}

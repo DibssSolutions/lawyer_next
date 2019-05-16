@@ -1,0 +1,129 @@
+.card
+	text-align: center
+	&__img
+		height: 255px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center bottom
+		&_sm
+			height: 225px
+	&__wrap
+		padding: 24px 25px 28px
+		border-radius: 5px
+		box-shadow: 0 20px 40px -15px #E3E6F5
+		background: $white
+		.sidebar &
+			padding: 24px 10px 28px
+	&__title
+		margin-bottom: 3px
+	&__post
+		+f(14px,400,1.285)
+		color: $textColor
+		&:not(:last-child)
+			margin-bottom: 4px
+	&__link
+		+f(12px,600,1.25)
+		color: $blue
+		transition: color .3s
+		+hover
+			color: rgba($blue,.7)
+
+.case-card
+	padding: 32px 25px 40px
+	height: 100%
+	color: $white
+	box-shadow: 0 20px 40px -15px #E3E6F5
+	border-radius: 8px
+	background-color: #1E2128
+	display: block
+	transition: box-shadow .3s
+	+sm
+		padding: 32px 25px 40px 17px
+	&_mod
+		padding: 32px 17px 40px
+	+hover
+		box-shadow: 0 8px 20px 0 darken(#E3E6F5, 15%)
+	&__wrap
+		display: flex
+	&__head
+		flex-grow: 1
+	&__name
+		+fnssc
+		+f(18px,900,1.2)
+		letter-spacing: 0.015em
+	&__post
+		margin-top: 6px
+		+f(12px,600,1.25)
+		text-transform: uppercase
+	&__img
+		position: relative
+		margin-top: -26px
+		flex-shrink: 0
+		width: 153px
+		height: 228px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center bottom
+		.case-card_mod &
+			margin: -16px -13px 0 -15px
+			height: 207px
+		.slick-slider &
+			width: 129px
+			+sm
+				width: 115px
+		+sm
+			width: 115px
+			margin-top: -37px
+			margin-right: -20px
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 70px
+			background-image: linear-gradient(180deg, rgba(30,33,40,0.00) 0%, #1E2128 100%)
+	&__title
+		margin-top: 20px
+		padding-right: 10px
+		+fnssc
+		+f(22px,900,1.5)
+		letter-spacing: 0.015em
+		+md
+			font-size: 16px
+		+sm
+			font-size: 22px
+		.sidebar &
+			padding-right: 0
+
+.image-card
+	display: flex
+	min-height: 336px
+	+f(16px,500,1.875)
+	color: $textColor
+	box-shadow: 0 20px 40px -15px #E3E6F5
+	+md
+		font-size: 14px
+		line-height: 2.2
+	+r(899)
+		display: block
+	&__img
+		+fs(47%)
+		border-radius: 8px 0 0 8px
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center bottom
+		+md
+			max-width: 100%
+			height: 239px
+			border-radius: 8px 8px 0 0
+	&__text-wrap
+		padding: 35px 33px 35px 35px
+		+fs(53%)
+		align-items: center
+		border-radius: 0 8px 8px 0
+		background-color: $white
+		display: flex
+		+md
+			padding: 20px 15px 25px
+			max-width: 100%

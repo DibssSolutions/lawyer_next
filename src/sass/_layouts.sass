@@ -1,23 +1,175 @@
-// CUSTOM COLUMN SIZES
++generate_grid()
 
-// $column-sizes: 5, 10, 15, 18, 20, 25, 30, 33.33, 35, 40, 45, 46, 50, 55, 54, 60, 65, 66.66, 70, 72, 80, 82, 85, 90, 100
-// $padding: 15px
+.inner
+	margin: 0 auto
+	padding: 0 50px
+	max-width: 1440px
+	+lg
+		padding: 0 30px
+	+sm
+		padding: 0 14px
 
-// @each $size in $column-sizes
-//   .col-#{round($size)}
-//     flex: 0 0 $size * 1%
-//     min-width: $size
-//     padding-left: $padding
-//     padding-right: $padding
+.wrap
+	padding: 70px 0
+	margin: 0 -18px
+	display: flex
+	+md
+		padding: 30px 0 60px
+	+sm
+		padding: 20px 0 60px
+		display: block
+	&_pn
+		padding: 0
 
-// .row
-//   display: flex
-//   flex-wrap: wrap
-//   margin: 0 -#{$padding}
+.col-left
+	padding: 0 16px
+	+fs(316px)
+	flex-shrink: 0
+	+lg
+		+fs(260px)
+	+r(1180)
+		display: none
+	.form &
+		+r(1180)
+			display: none
+.col-main
+	padding: 0 16px
+	flex-grow: 1
+	overflow: hidden
+	+sm
+		overflow: visible
+	.form &
+		overflow: visible
+.col-right
+	padding: 0 16px
+	+fs(332px)
+	flex-shrink: 0
+	+lg
+		+fs(260px)
+	+sm
+		padding-top: 30px
+		+fs(100%)
+	.form &
+		+r(1180)
+			display: none
 
-// [class*='col']
-//   padding: 0 $padding
+.sidebar
+	&__title
+		&:not(:last-child)
+			margin-bottom: 16px
+	&__group
+		&:not(:first-child)
+			margin-top: 39px
+	&__field
+		&:not(:first-child)
+			margin-top: 15px
 
-// GENERATE GRID EXAMPLE
-// CUSTOM PADDING ON BREAKPOINTS - NOT INCLUDED IN MIXIN
-// +generate_grid($columns: 3, $sizeXs: false, $sizeSm: false, $sizeMd: false, $sizeLg: true, $padding: 30px)
+.section
+	&:not(:last-child)
+		margin-bottom: 40px
+		+sm
+			margin-bottom: 35px
+	p
+		color: $textColor
+		&:not(:last-child)
+			margin-bottom: 12px
+	&_white
+		padding: 28px 25px
+		border-radius: 8px
+		box-shadow: 0 20px 40px -15px #E3E6F5
+		background-color: $white
+		+sm
+			padding: 28px 15px
+	&_blue
+		padding: 28px 25px
+		color: $white
+		border-radius: 8px
+		box-shadow: 0 40px 44px -30px #6A81DF
+		background-color: $blue
+		+sm
+			padding: 28px 15px
+		p
+			color: $white
+	&__title
+		margin-bottom: 18px
+		+sm
+			margin-bottom: 9px
+		&:not(:first-child)
+			margin-top: 36px
+			+sm
+				margin-top: 28px
+		&_md50
+			margin-bottom: 50px
+			+sm
+				margin-bottom: 40px
+	&__title-sm
+		margin-bottom: 16px
+		&_bord
+			position: relative
+			padding-bottom: 25px
+			&:before
+				position: absolute
+				content: ''
+				bottom: 0
+				left: -25px
+				right: -25px
+				height: 1px
+				background-color: currentColor
+		&:not(:first-child)
+			margin-top: 38px
+		& + .phone
+			margin-top: -15px
+	.img
+		margin: 0 -25px
+		&:not(:first-child)
+			margin-top: 30px
+		&:not(:last-child)
+			margin-bottom: 30px
+		& + .section__title
+			margin-top: 30px
+
+.img img
+	max-width: 100%
+	display: block
+
+.map
+	height: 317px
+	&:not(:first-child)
+		margin-top: 15px
+	&:not(:last-child)
+		margin-bottom: 15px
+
+.text-sm,
+.text-sm p
+	+f(12px,500,2)
+.text-md
+	+f(14px,500,1.93)
+
+.requisite-btn-wrap
+	text-align: right
+	+sm
+		margin-top: 20px
+		text-align: left
+	.btn
+		+xs
+			width: 100%
+.phone
+	+fns
+	+f(18px,700,1.578)
+	letter-spacing: 0.04em
+
+.md-hide
+	+md
+		display: none !important
+.md-show
+	display: none
+	+md
+		display: block
+
+.sm-hide
+	+sm
+		display: none !important
+.sm-show
+	display: none
+	+sm
+		display: block

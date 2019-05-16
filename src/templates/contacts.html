@@ -1,0 +1,77 @@
+---
+title: Contacts
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{{ header.block() }}
+	<div class="contacts">
+		<div class="contacts__inner inner">
+			<!-- begin section -->
+			<div class="section section_white">
+				<h1 class="section__title title">Контакты</h1>
+				<div class="text-md">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes,</p>
+					<h2 class="section__title-sm title-sm">Единый телефон в Москве:</h2>
+					<div class="phone">+7 (495) 212-10-27</div>
+				</div>
+			</div>
+			<!-- end section -->
+			<!-- begin section -->
+			<div class="section">
+				<!-- begin map -->
+				<div class="map js-map"></div>
+				<!-- end map -->
+				<!-- begin addresses -->
+				<div class="addresses">
+					<div class="addresses__row row">
+						{% for i in range(0,5) %}
+						<div class="addresses__col col col-4 col-sm-6 col-xs-12">
+							<!-- begin address -->
+							<div class="address{% if loop.first %} is-active{% endif %}">
+								<div class="address__metro">
+									<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+									    <title>Metro</title>
+									    <g fill="none" fill-rule="evenodd">
+									        <circle fill="#D43630" opacity=".1" cx="15" cy="15" r="15"/>
+									        <path fill="#D4362E" fill-rule="nonzero" d="M18.08 20l-.014-5.88-2.884 4.844H14.16l-2.87-4.718V20H9.162v-9.8h1.876l3.668 6.09 3.612-6.09h1.862l.028 9.8z"/>
+									    </g>
+									</svg>
+									Алексеевская
+								</div>
+								<div class="address__contacts">129085, г. Москва, Проспект Мира, д. 95, стр.1, 5 этаж, офис 13</div>
+							</div>
+							<!-- end address -->
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<!-- end addresses -->
+			</div>
+			<!-- end section -->
+			<!-- begin section -->
+			<div class="section section_white">
+				<div class="text-md">
+					<div class="row">
+						<div class="col col-6 col-sm-12">
+							<h2 class="section__title-sm title-sm">Реквизиты</h2>
+							<p>ООО «Правовой Центр «Вектор»</p>
+							<p>Юридический адрес: 127560 г. Москва, ул. Плещеева, д. 18, корп. 2.</p>
+							<p>ИНН/КПП 7715966250/771501001</p>
+							<p>ОГРН 1137746498449</p>
+							<p>ОКАТО 45280558000</p>
+						</div>
+						<div class="requisite-btn-wrap col col-6 col-sm-12">
+							<a href="#" class="btn"><img src="./img/doc.svg" alt="svg" class="icon">Скачать реквизиты</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end section -->
+		</div>
+	</div>
+	{% include "partials/_form.html" %}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

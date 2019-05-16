@@ -1,0 +1,77 @@
+.list-section
+	padding: 8px 0
+	counter-reset: list
+	color: $textColor
+	+f(16px,500,1.875)
+	+sm
+		border-radius: 8px
+	&_sidebar
+		padding: 27px 15px
+		border-radius: 8px
+		background-color: $white
+	&__item
+		position: relative
+		padding-left: 42px
+		+sm
+			padding-left: 0
+		.list-section_sidebar &
+			padding-left: 0
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			counter-increment: list
+			content: counter(list)'.'
+			+fns
+			color: $blue
+			+f(20px,900,1.5)
+			+sm
+				margin-right: 5px
+				position: relative
+				font-size: 14px
+				display: inline
+			.list-section_sidebar &
+				margin-right: 5px
+				position: relative
+				font-size: 14px
+				display: inline
+		&:nth-of-type(-n+9)
+			&:before
+				content: '0'counter(list)'.'
+		&:not(:last-child)
+			padding-bottom: 34px
+			+sm
+				padding-bottom: 26px
+			&:after
+				position: absolute
+				content: ''
+				top: 36px
+				left: 11px
+				width: 1px
+				bottom: 9px
+				background-color: rgba(#ACAEB7, .5)
+				+sm
+					display: none
+				.list-section_sidebar &
+					display: none
+			.list-section_sidebar &
+				padding-bottom: 25px
+				+sm
+					padding-bottom: 25px
+	&__title
+		+fns
+		+f(20px,900,1.5)
+		letter-spacing: 0.02em
+		color: $mainColor
+		display: block
+		+sm
+			display: inline
+		.list-section_sidebar &
+			display: inline
+	&__text
+		margin-top: 11px
+		display: block
+		+sm
+			margin-top: 7px
+		.list-section_sidebar &
+			margin-top: 7px

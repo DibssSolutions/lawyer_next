@@ -1,0 +1,111 @@
+.members
+	&__row
+		margin: 0 -10px -20px
+	&__col
+		padding: 0 10px
+		margin-bottom: 20px
+.member
+	position: relative
+	padding-right: 60px
+	+sm
+		padding: 0
+	&_default
+		padding: 0 0 0 93px
+		+sm
+			padding: 0
+	&__content
+		padding: 20px 90px 20px 30px
+		min-height: 260px
+		height: 100%
+		border-radius: 5px
+		box-shadow: 0 20px 40px -15px #E3E6F5
+		background-color: $white
+		+sm
+			padding: 22px 15px
+		.member_default &
+			padding: 31px 30px 20px 118px
+			min-height: 282px
+			+sm
+				padding: 22px 15px
+	&__title
+		margin-bottom: 10px
+		+fns
+		+f(18px,900,1.44)
+		.member_default &
+			font-size: 25px
+			+sm
+				font-size: 18px
+	&__position
+		margin-bottom: 10px
+		color: #9799A5
+		+f(14px,500,1)
+		.member_default &
+			margin-bottom: 25px
+	&__services
+		display: inline
+	&__service
+		position: relative
+		padding-left: 18px
+		margin: 0 10px 10px 0
+		+fns
+		+f(14px,700,1.758)
+		vertical-align: top
+		display: inline-block
+		.member_default &
+			margin-right: 32px
+		img
+			position: absolute
+			top: 7px
+			left: 0
+			width: 10px
+			height: auto
+	&__inf
+		+fns
+		display: inline
+	&__metro
+		position: relative
+		margin-top: 10px
+		padding: 3px 0 3px 40px
+		+fns
+		+f(14px,700,1.785)
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 30px
+			height: auto
+	&__contacts
+		margin-top: 10px
+		color: #9799A5
+		+f(12px,400,1.5)
+	&__footer
+		margin-top: 20px
+		.btn
+			+xs
+				width: 100%
+	&__img
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 146px
+		height: 260px
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center
+		+sm
+			position: relative
+			width: 133px
+			height: 219px
+			order: 1
+			margin: 0 auto
+		.member_default &
+			left: 0
+			bottom: -1px
+			width: 158px
+			height: 282px
+			+sm
+				position: relative
+				width: 133px
+				height: 219px
+				order: 1
+				margin: 0 auto

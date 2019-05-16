@@ -1,0 +1,31 @@
+{% macro block(array) %}
+<!-- begin col-left -->
+<div class="col-left">
+	<!-- begin accordions -->
+	<div class="accordions" data-accordion-group data-accordion-multiple>
+		{% for accordion in array %}
+		<!-- begin accordion -->
+		<div class="accordion" data-accordion-item{% if accordion.open %} data-accordion-open{% endif %}>
+			<div class="accordion__head" data-accordion-trigger>
+				<div class="accordion__icon">
+					<img src="./img/{{ accordion.icon }}" alt="img">
+				</div>
+				<div class="accordion__title">{{ accordion.title }}</div>
+			</div>
+			<div class="accordion__container" data-accordion-container>
+				<ul class="accordion__list">
+					{% for text in accordion.list %}
+				    <li class="accordion__item">
+				    	<a href="#" class="accordion__link{% if accordion.activeClass === loop.index %} is-active{% endif %}">{{ text }}</a>
+				    </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<!-- end accordion -->
+		{% endfor %}
+	</div>
+	<!-- end accordions -->
+</div>
+<!-- end col-left -->
+{% endmacro %}

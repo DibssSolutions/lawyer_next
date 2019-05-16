@@ -1,0 +1,50 @@
+.contacts
+	padding: 50px 0
+	&__inner
+		max-width: 790px
+
+.addresses
+	&__row
+		margin: 0 -8px -16px
+	&__col
+		margin-bottom: 16px
+		padding: 0 8px
+.address
+	padding: 25px 15px
+	border-radius: 4px
+	height: 100%
+	cursor: pointer
+	transition: color .3s, background-color .3s, box-shadow .3s
+	background-color: $white
+	.no-touch &:hover,
+	&.is-active
+		color: $white
+		background-color: $blue
+		box-shadow: 0 40px 62px -30px #6A81DF
+		.address__contacts
+			color: $white
+		svg
+			circle,
+			path
+				fill: $white
+	&__metro
+		position: relative
+		padding: 3px 0 3px 40px
+		+fns
+		+f(14px,700,1.785)
+		text-transform: uppercase
+		img,
+		svg
+			position: absolute
+			top: 0
+			left: 0
+			width: 30px
+			height: auto
+			circle,
+			path
+				transition: fill .3s
+	&__contacts
+		margin-top: 20px
+		color: #9799A5
+		+f(12px,400,1.8)
+		transition: color .3s

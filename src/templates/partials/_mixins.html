@@ -28,3 +28,113 @@
 </label>
 <!-- end input -->
 {% endmacro %}
+
+{% macro callback() %}
+<!-- begin callback -->
+<div class="callback">
+	<form action="/">
+		<div class="callback__title">Получите консультацию юриста/адвоката. Она бесплатна и ни к чему вас не обязывает.</div>
+		<div class="callback__control">
+			<div class="form-control form-control_white">
+				<label class="label">Введите телефон</label>
+				<div class="input"><input type="text" placeholder="+7 (" data-inputmask-placeholder="+7 (              " data-inputmask="'mask': '+7 (999) 99 99 999'"></div>
+			</div>
+		</div>
+		<div class="callback__submit">
+			<button class="btn btn_full btn_white" type="button">Обрытнй звонок</button>
+		</div>
+		<div class="callback__text">Я согласен с условиями обработки персональных данных</div>
+	</form>
+</div>
+<!-- end callback -->
+{% endmacro %}
+
+{% macro simpleNews(props) %}
+<!-- begin simple-news -->
+<a href="#" class="simple-news">
+	<div class="simple-news__img" style="background-image: url(./img/{{ props.img }})"></div>
+	<div class="simple-news__wrap">
+		<ul class="simple-news__list info-list">
+			<li class="info-list__item">
+				<span class="tag">{{ props.tag }}</span>
+			</li>
+			<li class="info-list__item">
+				<span class="data">{{ props.data }}</span>
+			</li>
+		</ul>
+		<div class="simple-news__title">{{ props.title }}</div>
+	</div>
+</a>
+<!-- end simple-news -->
+{% endmacro %}
+
+{% macro comment(props) %}
+<!-- begin comment -->
+<div class="comment">
+	<div class="comment__top">
+		{% if props.img %}
+		<div class="comment__img" style="background-image: url(./img/{{ props.img }})"></div>
+		{% endif %}
+		<div class="comment__wrap">
+			<div class="comment__name">{{ props.name }}</div>
+			<ul class="comment__info-list info-list">
+				<li class="info-list__item">
+					<span class="tag">Комментарий</span>
+				</li>
+				<li class="info-list__item">
+					<span class="data">18.02.2019</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="comment__title">{{ props.title }}</div>
+</div>
+<!-- end comment -->
+{% endmacro %}
+
+{% macro review(props) %}
+<!-- begin review -->
+<div class="review">
+	<div class="review__wrap">
+		<div class="review__head">
+			<div class="review__img" style="background-image: url(./img/{{ props.img or 'review-img.png' }});"></div>
+			<div class="review__name-wrap">
+				<div class="review__name">{{ props.name or 'Stanley Green' }}</div>
+			</div>
+		</div>
+		<div class="review__text">{{ props.text or 'A gentleman from New York discovered what he calls an “oversight” on the part of 99.9% of all marketers that allows him to get otherwise paid-for' }}</div>
+	</div>
+	<div class="review__footer">
+		<a href="#" class="btn btn_md btn_full btn_light-blue">Читать далее</a>
+	</div>
+</div>
+<!-- end review -->
+{% endmacro %}
+
+{% macro card(props) %}
+<!-- begin card -->
+<div class="card">
+	<div class="card__img{% if props.imgSm %} card__img_sm{% endif %}" style="background-image: url(./img/lawyer-img.png);"></div>
+	<div class="card__wrap">
+		<h4 class="card__title title-sm">Myra Burns</h4>
+		<div class="card__post">Адвокат</div>
+		<a href="#" class="card__link">Написать письмо</a>
+	</div>
+</div>
+<!-- end card -->
+{% endmacro %}
+
+{% macro caseСard(props) %}
+<!-- begin case-card -->
+<a href="#" class="case-card{% if props.mod %} case-card_mod{% endif %}">
+	<span class="case-card__wrap">
+		<div class="case-card__head">
+			<div class="case-card__name">Иванов Иван</div>
+			<div class="case-card__post">Адвокат</div>
+		</div>
+		<div class="case-card__img" style="background-image: url(./img/case-card-img.png);"></div>
+	</span>
+	<div class="case-card__title">Раздел имущества супругов при расторжении брака</div>
+</a>
+<!-- end case-card -->
+{% endmacro %}

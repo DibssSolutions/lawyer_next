@@ -1,0 +1,26 @@
+.simple-news
+	overflow: hidden
+	border-radius: 4px
+	color: $mainColor
+	background-color: $white
+	box-shadow: 0 10px 30px -5px #E3E6F5
+	display: block
+	transition: box-shadow .3s
+	+hover
+		box-shadow: 0 8px 20px 0 darken(#E3E6F5, 5%)
+	&__img
+		height: 183px
+		background-position: center
+		background-size: cover
+	&__wrap
+		padding: 18px 24px 30px
+		+sm
+			padding: 18px 14px 30px
+		.sidebar &
+			padding: 18px 15px 30px
+	&__list
+		margin-bottom: 12px
+	&__title
+		+fnssc
+		+f(17px,900,1.5)
+		letter-spacing: .0135em

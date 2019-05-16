@@ -1,0 +1,41 @@
+<div class="sidebar">
+	<div class="sidebar__group">
+		{% for i in range(0,2) %}
+		    <div class="sidebar__field">
+		    	{{ mixins.card({ imgSm: true }) }}
+		    </div>
+		{% endfor %}
+		<div class="sidebar__field">
+			<a href="#" class="btn btn_md btn_full btn_light-blue">Вся команда</a>
+		</div>
+	</div>
+	<div class="sidebar__group">
+		{{ mixins.callback() }}
+	</div>
+	<div class="sidebar__group">
+		<h4 class="sidebar__title title-sm">Дела</h4>
+		{% for item in range(0,2) %}
+		<div class="sidebar__field">
+		    {{ mixins.caseСard({ mod: true }) }}
+		</div>
+		{% endfor %}
+		<div class="sidebar__field">
+			<a href="#" class="btn btn_md btn_full btn_light-blue">Все дела</a>
+		</div>
+	</div>
+	<div class="sidebar__group">
+		<h4 class="sidebar__title title-sm">Отзывы</h4>
+		{% for i in range(0,2) %}
+		<div class="sidebar__field">
+			{{ mixins.comment({
+				img: 'comment-img-1.png',
+				name: 'Иван',
+				title: 'Скандальное дело в Люберецком Суде'
+			})}}
+		</div>
+		{% endfor %}
+		<div class="sidebar__field">
+			<a href="#" class="btn btn_md btn_full btn_light-blue">Все отзывы</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,78 @@
+---
+title: Business
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{{ header.block() }}
+	<div class="inner">
+		<!-- begin wrap -->
+		<div class="wrap">
+			<div class="col-left">
+				<!-- begin accordions -->
+				<div class="accordions" data-accordion-group data-accordion-multiple>
+					<!-- begin accordion -->
+					<div class="accordion" data-accordion-item data-accordion-open>
+						<div class="accordion__head" data-accordion-trigger>
+							<div class="accordion__icon">
+								<img src="./img/individuals.svg" alt="img">
+							</div>
+							<div class="accordion__title">Пресс центр</div>
+						</div>
+						<div class="accordion__container" data-accordion-container>
+							<ul class="accordion__list">
+								{% for text in ['Новости','Публикации','Комментарии в СМИ','Дела','Решение судов','Отзывы'] %}
+							    <li class="accordion__item">
+							    	<a href="#" class="accordion__link">{{ text }}</a>
+							    </li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					<!-- end accordion -->
+				</div>
+				<!-- end accordions -->
+			</div>
+			<div class="col-main">
+				<!-- begin section -->
+				<div class="section section_white">
+					<h1 class="section__title section__title_md50 title title_mob-lg">Раздел имущества супругов при расторжении брака</h1>
+					<div class="text-md">
+						<h2 class="section__title-sm title-sm">Описание</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+						<h2 class="section__title-sm title-sm">Предпринятые действия</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+						<h2 class="section__title-sm title-sm">Результат</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+						<h2 class="section__title-sm title-sm">Решение суда</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+					</div>
+				</div>
+				<!-- end section -->
+			</div>
+			<div class="col-right">
+				<div class="sidebar">
+					<div class="sidebar__group">
+						<h4 class="sidebar__title title-sm">Дело вел</h4>
+						<div class="sidebar__field">
+						    {{ mixins.card({ imgSm: true }) }}
+						</div>
+					</div>
+					<div class="sidebar__group">
+						<h4 class="sidebar__title title-sm">Отзыв по делу:</h4>
+						{{ mixins.comment({
+							img: 'comment-img-1.png',
+							name: 'Иван',
+							title: 'Скандальное дело в Люберецком Суде'
+						})}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end wrap -->
+	</div>
+	{% include "partials/_form.html" %}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

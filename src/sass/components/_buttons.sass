@@ -1,0 +1,39 @@
+.btn
+	padding: 16px 25px
+	+fmt
+	+f(14px,600,1.29)
+	text-align: center
+	color: $white
+	border-radius: 6px
+	vertical-align: top
+	transition: background-color .3s, color .3s, transform .3s, box-shadow .3s
+	background-color: $blue
+	display: inline-block
+	+hover
+		background-color: darken($blue, 10%)
+		transform: translateY(-2px)
+		box-shadow: 0 5px 15px 0 rgba($black, .2)
+	&_mw
+		min-width: 260px
+	&_full
+		width: 100%
+	&_md
+		padding-top: 14px
+		padding-bottom: 14px
+		line-height: 1.25
+	&_white
+		color: #0D1420
+		background-color: $white
+		+hover
+			color: $blue
+			background-color: $white
+	&_light-blue
+		color: $blue
+		background-color: rgba($blue, .1)
+		+hover
+			color: $white
+			background-color: $blue
+	.icon
+		margin-right: 14px
+		vertical-align: middle
+		display: inline-block

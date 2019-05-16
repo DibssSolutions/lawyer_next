@@ -2,4 +2,24 @@ ProjectTitle: template
 
 PageList:
 - file: page.html
-  ready: 50
+  ready: 100
+- file: physical_persons.html
+  ready: 100
+- file: legal-entity.html
+  ready: 100
+- file: family-disputes.html
+  ready: 100
+- file: about.html
+  ready: 100
+- file: press-center.html
+  ready: 100
+- file: reviews.html
+  ready: 100
+- file: team.html
+  ready: 100
+- file: lawyer.html
+  ready: 100
+- file: business.html
+  ready: 100
+- file: contacts.html
+  ready: 100

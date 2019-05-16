@@ -1,0 +1,75 @@
+<!-- begin footer -->
+<footer class="footer">
+	<div class="footer__inner inner">
+		<div class="footer__top">
+			<div class="footer__search">
+				<!-- begin simple-search -->
+				<form class="simple-search">
+					<div class="simple-search__input">
+						<input type="text" placeholder="Поиск">
+					</div>
+					<button class="simple-search__submit" type="submit">{{ mixins.icon('search') }}</button>
+				</form>
+				<!-- end simple-search -->
+			</div>
+			<div class="footer__logo">
+				<a href="#" class="logo">
+					<img src="./img/logo-white.png" alt="logo">
+				</a>
+			</div>
+			<div class="footer__soc">
+				<!-- begin soc -->
+				<ul class="soc">
+					{% for icon in ['vk','fb','inst'] %}
+					    <li class="soc__item">
+					    	<a href="#" class="soc__link">{{ mixins.icon(icon) }}</a>
+					    </li>
+					{% endfor %}
+				</ul>
+				<!-- end soc -->
+			</div>
+		</div>
+		<div class="footer__middle">
+			<div class="footer__sitemap">
+				<h4 class="footer__title-sm title-sm">Карта сайта</h4>
+				<ul class="sitemap">
+					{% for text in ['Главная','Физическим лицам','Юридическим лицам','О нас','Команда','Пресс центр','Контакты'] %}
+					<li class="sitemap__item">
+						<a href="#" class="sitemap__link">{{ text }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="footer__offices">
+				<h4 class="footer__title-sm title-sm">Наши офисы</h4>
+				<div class="footer__offices-list">
+					{% for text in ['Семеновская, ул. Щербаковская д.3, (3 этаж, офис 311)','Октябрьская, ул. Ленинский проспект 2а, 2 этаж, офис 218','Алексеевская, ул. Проспект Мира, д.95, стр.1 (5 эт., офис 13).','Бибирево, ул. Плещеева, д. 18, корп. 2.','Менделеевская, ул. Новослободская, д. 26с1 (2 под., офис 233).'] %}
+					<p>{{ text }}</p>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="footer__contacts-info">
+				<div class="footer__time">
+					<h4 class="footer__title-sm title-sm">Время работы</h4>
+					<p>ПН-ВС 10:00 - 20:00</p>
+				</div>
+				<div class="footer__contacts">
+					<div class="footer__mail">
+						<h4 class="footer__title-sm title-sm">Почта</h4>
+						<p><a href="mailto:info@mpcvector.ru">info@mpcvector.ru</a></p>
+					</div>
+					<div class="footer__phone">
+						<h4 class="footer__title-sm title-sm">Телефон</h4>
+						<p><a href="tel:+74952121027">+7 (495) 212-10-27</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__copy">&copy; 2019, МПЦ Вектор</div>
+			<div class="footer__policy"><a href="#">Политика конфиденциальности</a></div>
+			<div class="footer__development">Разработка - <a href="#">Blacksmith Studio</a></div>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->

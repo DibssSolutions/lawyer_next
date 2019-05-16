@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Главная" transform="translate(-1368.000000, -1257.000000)" fill="#6A81DF" fill-rule="nonzero">
+            <g id="Group-13" transform="translate(1090.000000, 1232.000000)">
+                <path d="M281.97414,28.0006537 C281.769274,28.0057206 281.57347,28.0909997 281.424632,28.2399832 L276.252697,33.4915709 C275.924079,33.828007 275.914757,34.3822426 276.231852,34.7308295 C276.548948,35.0794164 277.072915,35.0909361 277.403432,34.7565872 L281.999999,30.0862457 L286.596568,34.7565872 C286.927085,35.0909361 287.451052,35.0794164 287.768148,34.7308295 C288.085243,34.3822426 288.075921,33.828007 287.747303,33.4915709 L282.575367,28.2399832 C282.4136,28.0778355 282.196841,27.9915504 281.97414,28.0006537 Z" id="Path" transform="translate(282.000000, 31.500000) rotate(-270.000000) translate(-282.000000, -31.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

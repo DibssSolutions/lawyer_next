@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Copy" transform="translate(-278.000000, -209.000000)" fill="#6A81DF" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(30.000000, 154.000000)">
+                <g id="Group-6" transform="translate(0.000000, 49.000000)">
+                    <path d="M252.576009,15.7205927 C252.250749,16.0128829 251.627019,16.1335429 251.263479,15.7955927 C250.905368,15.4627425 250.916018,14.8172021 251.272779,14.4830318 L255.519289,10 L254.647901,9.10154732 L251.272779,5.52011497 C250.965638,5.21246476 250.908878,4.54421433 251.263479,4.20755411 C251.617959,3.87092388 252.264099,3.97847396 252.576009,4.28258415 L257.376193,9.3827885 C257.716423,9.80362878 257.683843,10.204729 257.376193,10.6203493 L252.576009,15.7205927 Z" id="Path" transform="translate(254.309651, 10.000000) rotate(-270.000000) translate(-254.309651, -10.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

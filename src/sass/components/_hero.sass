@@ -1,0 +1,53 @@
+.hero
+	padding: 200px 0 50px
+	color: $white
+	min-height: 100vh
+	align-items: center
+	flex-wrap: wrap
+	background-size: contain
+	background-position: center bottom
+	background-repeat: no-repeat
+	background-color: #090909
+	display: flex
+	+md
+		padding: 123px 0 40px
+	+sm
+		align-items: unset
+		background-size: 600px
+		background-position: center
+	&__inner
+		width: 100%
+		flex-wrap: wrap
+		display: flex
+		justify-content: space-between
+	&__left
+		padding-left: 50px
+		max-width: 530px
+		+md
+			padding-left: 0
+			max-width: 340px
+	&__right
+		padding-top: 18px
+		max-width: 390px
+		+f(20px,500,1.55)
+		+md
+			font-size: 16px
+		+sm
+			margin-top: auto
+			padding-left: 40px
+			font-size: 16px
+			line-height: 2
+	&__text
+		+fnssc
+		&:first-letter
+			margin-right: 12px
+			text-transform: uppercase
+			font-size: 44px
+			font-weight: 900
+			line-height: 0.8
+	&__footer
+		margin-top: 40px
+		font-size: 16px
+		+sm
+			margin-top: 20px
+			font-size: 12px
