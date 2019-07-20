@@ -1,0 +1,129 @@
+---
+title: Lawyer
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{{ header.block() }}
+	<div class="inner">
+		<!-- begin wrap -->
+		<div class="wrap">
+			<div class="col-left">
+				<!-- begin accordions -->
+				<div class="accordions" data-accordion-group data-accordion-multiple>
+					<!-- begin accordion -->
+					<div class="accordion" data-accordion-item data-accordion-open>
+						<div class="accordion__head" data-accordion-trigger>
+							<div class="accordion__icon">
+								<img src="./img/individuals.svg" alt="img">
+							</div>
+							<div class="accordion__title">Команда</div>
+						</div>
+						<div class="accordion__container" data-accordion-container>
+							<ul class="accordion__list">
+								{% for text in ['Адвокаты','Юристы'] %}
+							    <li class="accordion__item">
+							    	<a href="#" class="accordion__link">{{ text }}</a>
+							    </li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					<!-- end accordion -->
+				</div>
+				<!-- end accordions -->
+			</div>
+			<div class="col-main">
+				<!-- begin section -->
+				<div class="section">
+					<div class="member member_default">
+						<div class="member__img" style="background-image: url(./img/case-card-img.png);"></div>
+						<div class="member__content">
+							<div class="member__title">Иван Иванов</div>
+							<div class="member__position">Адвокат</div>
+							<ul class="member__services">
+								{% for text in ['Уголовное право','Страховое право','Уголовное право','Страховое право'] %}
+									<li class="member__service">
+										<img src="./img/services-img.svg" alt="img">
+										{{ text }}
+									</li>
+								{% endfor %}
+							</ul>
+							<div class="member__footer">
+								<a href="#" class="btn">Назначить встречу</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end section -->
+				<!-- begin section -->
+				<div class="section section_white">
+					<div class="text-md">
+						<p>Адвокат зарегистрирован в 2008 году Управлением Министерства юстиции по Московской области в реестре адвокатов под регистрационным номером 50/6018.</p>
+						<h2 class="section__title-sm title-sm">Имеет высшее юридическое образование:</h2>
+						<p>1987 год — Орджоникидзевское высшее военное командное Краснознаменное училище им. С.М. Кирова МВД СССР;</p>
+						<p>1997 году — Омский юридический институт МВД РФ</p>
+						<h2 class="section__title-sm title-sm">Стаж работы по юридической специальности  более 30 лет:</h2>
+						<p>С 1987 по 1992 гг. — офицер специальных частей ВВ МВД СССР</p>
+						<p>С 1992 по 1997 гг. — Уголовный розыск ГУВД Кемеровской области, оперуполномоченный</p>
+						<p>С 1997 по 2005 гг. — Прокуратура Московской области, старший следователь</p>
+						<p>С 2006 по 2008 гг. — ГК Строительный холдинг, начальник юридического департамента</p>
+						<p>С 2008 по настоящее время — Адвокатская Палата Московской Области, адвокат</p>
+						<p>С 2012 г. по настоящее время — Московский Правовой Центр «Вектор», адвокат</p>
+						<h2 class="section__title-sm title-sm">Дополнительно:</h2>
+						<p>— Оказывает высококвалифицированную юридическую помощь физическим и юридическим лицам в Москве и Московской области в соответствии с Федеральным Законом «Об адвокатской деятельности и адвокатуре в РФ» и «Кодексом профессиональной этики адвоката</p>
+						<p>— Благодарственные письма Генерального Прокурора России</p>
+						<p>— Похвальная грамота Прокуратуры Московской области</p>
+						<p>— Благодарственное письмо МВД СССР</p>
+						<p>— Классный чин: Советник юстиции</p>
+						<p>— Благодарственное письмо Адвокатской Палаты МО</p>
+						<p>— Курсы повышения квалификации (для юристов, Консультант+)</p>
+						<p>— Владение иностранными языками: английский</p>
+					</div>
+				</div>
+				<!-- end section -->
+			</div>
+			<div class="col-right">
+				<div class="sidebar">
+					<div class="sidebar__group">
+						<h4 class="sidebar__title title-sm">Дела</h4>
+						{% for item in range(0,2) %}
+						<div class="sidebar__field">
+						    {{ mixins.caseСard({ mod: true }) }}
+						</div>
+						{% endfor %}
+					</div>
+					<div class="sidebar__group">
+						<h4 class="sidebar__title title-sm">Отзывы</h4>
+						{% for i in range(0,2) %}
+						<div class="sidebar__field">
+							{{ mixins.comment({
+								img: 'comment-img-1.png',
+								name: 'Иван',
+								title: 'Скандальное дело в Люберецком Суде'
+							})}}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end wrap -->
+	</div>
+	{% include "partials/_form.html" %}
+	{% include "partials/_footer.html" %}
+	<!-- begin modal -->
+	<div class="modal is-open" data-modal='feedback'>
+	    <div class="modal__container modal__container_blue" data-modal-container>
+	        <div class="modal__inner">
+	            <button class="modal__close" data-modal-close>
+	            {{mixins.icon('close')}}
+	            </button>
+	            {{ mixins.callback() }}
+	        </div>
+	    </div>
+	</div>
+	<!-- end modal -->
+
+{% endblock %}

@@ -53,6 +53,16 @@ title: Reviews
 					</div>
 				</div>
 				<!-- end section -->
+				<div class="pagination">
+				    <a class="prev page-numbers" href="http://localhost:8888/affairs//">← Ранее</a>
+					<a class="page-numbers" href="http://localhost:8888/affairs//">1</a>
+					<span aria-current="page" class="page-numbers current">2</span>
+					<a class="page-numbers" href="http://localhost:8888/affairs///page/3">3</a>
+					<a class="page-numbers" href="http://localhost:8888/affairs///page/4">4</a>
+					<span class="page-numbers dots">…</span>
+					<a class="page-numbers" href="http://localhost:8888/affairs///page/10">10</a>
+					<a class="next page-numbers" href="http://localhost:8888/affairs///page/3">Далее →</a>
+				</div>
 			</div>
 			<div class="col-right">
 				{{ mixins.callback() }}
@@ -62,5 +72,18 @@ title: Reviews
 	</div>
 	{% include "partials/_form.html" %}
 	{% include "partials/_footer.html" %}
+	<!-- begin modal -->
+	<div class="modal" data-modal='comment-feedback'>
+	    <div class="modal__container" data-modal-container>
+	        <div class="modal__inner">
+	            <button class="modal__close" data-modal-close>
+	            {{mixins.icon('close')}}
+	            </button>
+	            <div class="feedback-modal">
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- end modal -->
 
 {% endblock %}

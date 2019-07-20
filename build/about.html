@@ -24,8 +24,11 @@
           <div class="header__top">
             <div class="header__search">
               <!-- begin search -->
-              <div class="search">
-                <button class="search__btn" type="butoon">
+              <div class="search js-search">
+                <div class="search__input">
+                  <input type="text" placeholder="Поиск">
+                </div>
+                <button class="search__btn js-search-btn" type="butoon">
                   <svg class="icon icon-search">
                     <use xlink:href="img/sprite.svg#icon-search"></use>
                   </svg>
@@ -588,48 +591,6 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function()
-      {
-        var map = document.querySelectorAll('.js-map');
-        if (map.length)
-        {
-          ymaps.ready(function()
-          {
-            map.forEach(function(el)
-            {
-              var newMap = new ymaps.Map(el,
-              {
-                center: [55.76, 37.64],
-                zoom: 10
-              });
-              newMap.behaviors.disable('scrollZoom');
-              newMap.controls.remove('smallMapDefaultSet');
-              newMap.controls.remove('trafficControl');
-              newMap.controls.remove('rulerControl');
-              newMap.container.fitToViewport();
-              if (newMap)
-              {
-                ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle)
-                {
-                  var placemark = new Placemark([55.76, 37.64],
-                  {},
-                  {
-                    iconLayout: 'default#image',
-                    iconImageHref: './img/point.png',
-                    iconImageSize: [50, 50],
-                    iconImageOffset: [-12, -12]
-                  });
-                  newMap.geoObjects.add(placemark);
-                });
-              }
-            });
-          });
-        }
-      });
-
-    </script>
     <!-- END scripts -->
   </body>
 

@@ -24,8 +24,11 @@
           <div class="header__top">
             <div class="header__search">
               <!-- begin search -->
-              <div class="search">
-                <button class="search__btn" type="butoon">
+              <div class="search js-search">
+                <div class="search__input">
+                  <input type="text" placeholder="Поиск">
+                </div>
+                <button class="search__btn js-search-btn" type="butoon">
                   <svg class="icon icon-search">
                     <use xlink:href="img/sprite.svg#icon-search"></use>
                   </svg>
@@ -351,7 +354,23 @@
                 <h4 class="sidebar__title title-sm">Отзывы</h4>
                 <div class="sidebar__field">
                   <!-- begin comment -->
-                  <div class="comment">
+                  <div class="comment" class="feedback-card" data-modal-control="comment-feedback" data-modal-content='<div class="comment comment_mod">
+	<div class="comment__top">
+                        <div class="comment__img" style="background-image: url(./img/comment-img-1.png)"></div>
+                        <div class="comment__wrap">
+                          <div class="comment__name">Иван</div>
+                          <ul class="comment__info-list info-list">
+                            <li class="info-list__item">
+                              <span class="tag">Комментарий</span>
+                            </li>
+                            <li class="info-list__item">
+                              <span class="data">18.02.2019</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="comment__text">
+                <p>Ранее мне уже приходилось сталкиваться с юристами, которые называли себя «профессионалами». В этот раз искала действительно специалистов, действительно разбирающихся в урегулировании споров со страховой компанией. Пришла в офис «Вектора» и не прогадала! Только здесь мне помогли добиться причитающейся от страховой компании выплаты после ДТП. Ещё и за моральный ущерб удалось деньги получить! При этом дело до суда так и не дошло. Как юрист смог это сделать – загадка. Но факт остаётся фактом – результат положительный, деньги свои я получила. Буду советовать «Вектор» всем, кто столкнётся с подобной проблемой.</p></div></div>'>
                     <div class="comment__top">
                       <div class="comment__img" style="background-image: url(./img/comment-img-1.png)"></div>
                       <div class="comment__wrap">
@@ -372,7 +391,23 @@
                 </div>
                 <div class="sidebar__field">
                   <!-- begin comment -->
-                  <div class="comment">
+                  <div class="comment" class="feedback-card" data-modal-control="comment-feedback" data-modal-content='<div class="comment comment_mod">
+	<div class="comment__top">
+                        <div class="comment__img" style="background-image: url(./img/comment-img-1.png)"></div>
+                        <div class="comment__wrap">
+                          <div class="comment__name">Иван</div>
+                          <ul class="comment__info-list info-list">
+                            <li class="info-list__item">
+                              <span class="tag">Комментарий</span>
+                            </li>
+                            <li class="info-list__item">
+                              <span class="data">18.02.2019</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="comment__text">
+                <p>Ранее мне уже приходилось сталкиваться с юристами, которые называли себя «профессионалами». В этот раз искала действительно специалистов, действительно разбирающихся в урегулировании споров со страховой компанией. Пришла в офис «Вектора» и не прогадала! Только здесь мне помогли добиться причитающейся от страховой компании выплаты после ДТП. Ещё и за моральный ущерб удалось деньги получить! При этом дело до суда так и не дошло. Как юрист смог это сделать – загадка. Но факт остаётся фактом – результат положительный, деньги свои я получила. Буду советовать «Вектор» всем, кто столкнётся с подобной проблемой.</p></div></div>'>
                     <div class="comment__top">
                       <div class="comment__img" style="background-image: url(./img/comment-img-1.png)"></div>
                       <div class="comment__wrap">
@@ -549,48 +584,6 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function()
-      {
-        var map = document.querySelectorAll('.js-map');
-        if (map.length)
-        {
-          ymaps.ready(function()
-          {
-            map.forEach(function(el)
-            {
-              var newMap = new ymaps.Map(el,
-              {
-                center: [55.76, 37.64],
-                zoom: 10
-              });
-              newMap.behaviors.disable('scrollZoom');
-              newMap.controls.remove('smallMapDefaultSet');
-              newMap.controls.remove('trafficControl');
-              newMap.controls.remove('rulerControl');
-              newMap.container.fitToViewport();
-              if (newMap)
-              {
-                ymaps.modules.require(['Placemark', 'Circle'], function(Placemark, Circle)
-                {
-                  var placemark = new Placemark([55.76, 37.64],
-                  {},
-                  {
-                    iconLayout: 'default#image',
-                    iconImageHref: './img/point.png',
-                    iconImageSize: [50, 50],
-                    iconImageOffset: [-12, -12]
-                  });
-                  newMap.geoObjects.add(placemark);
-                });
-              }
-            });
-          });
-        }
-      });
-
-    </script>
     <!-- END scripts -->
   </body>
 

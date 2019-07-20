@@ -8,3 +8,7 @@ btn.on('click', () => {
     ? HTML.addClass(openMenu)
     : HTML.removeClass(openMenu);
 });
+
+$('.js-search-btn').on('click', function() {
+  $(this).parents('.js-search').toggleClass('is-open');
+});

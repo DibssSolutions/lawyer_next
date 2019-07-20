@@ -70,7 +70,23 @@
 
 {% macro comment(props) %}
 <!-- begin comment -->
-<div class="comment">
+<div class="comment"  class="feedback-card" data-modal-control="comment-feedback" data-modal-content='<div class="comment comment_mod">
+	<div class="comment__top">
+                        <div class="comment__img" style="background-image: url(./img/comment-img-1.png)"></div>
+                        <div class="comment__wrap">
+                          <div class="comment__name">Иван</div>
+                          <ul class="comment__info-list info-list">
+                            <li class="info-list__item">
+                              <span class="tag">Комментарий</span>
+                            </li>
+                            <li class="info-list__item">
+                              <span class="data">18.02.2019</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="comment__text">
+                <p>Ранее мне уже приходилось сталкиваться с юристами, которые называли себя «профессионалами». В этот раз искала действительно специалистов, действительно разбирающихся в урегулировании споров со страховой компанией. Пришла в офис «Вектора» и не прогадала! Только здесь мне помогли добиться причитающейся от страховой компании выплаты после ДТП. Ещё и за моральный ущерб удалось деньги получить! При этом дело до суда так и не дошло. Как юрист смог это сделать – загадка. Но факт остаётся фактом – результат положительный, деньги свои я получила. Буду советовать «Вектор» всем, кто столкнётся с подобной проблемой.</p></div></div>'>
 	<div class="comment__top">
 		{% if props.img %}
 		<div class="comment__img" style="background-image: url(./img/{{ props.img }})"></div>

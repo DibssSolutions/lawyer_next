@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="22px" viewBox="0 0 25 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Текстовая" transform="translate(-405.000000, -685.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-12" transform="translate(365.000000, 249.000000)">
+                <g id="Group-6" transform="translate(25.000000, 422.000000)">
+                    <g id="two-quotes" transform="translate(15.000000, 15.000000)">
+                        <path d="M4.79576125,-1 C2.14705629,-1 0,1.23866667 0,4 C0,6.76166667 2.14705629,9 4.79576125,9 C9.59119356,9 6.39412904,18.6666667 0,18.6666667 L0,21 C11.4112736,21 15.8836771,-1 4.79576125,-1 Z M18.611659,-1 C15.962954,-1 13.8158977,1.23866667 13.8158977,4 C13.8158977,6.76166667 15.962954,9 18.611659,9 C23.4070913,9 20.2100267,18.6666667 13.8158977,18.6666667 L13.8158977,21 C25.2271713,21 29.6995748,-1 18.611659,-1 Z" id="Shape" transform="translate(12.500000, 10.000000) scale(-1, -1) translate(-12.500000, -10.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

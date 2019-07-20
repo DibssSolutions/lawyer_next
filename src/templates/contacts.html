@@ -19,17 +19,25 @@ title: Contacts
 			</div>
 			<!-- end section -->
 			<!-- begin section -->
-			<div class="section">
+			<div class="section" data-tabs>
+				<div class="section__map" data-tabs-wrapper>
+					{% for i in range(0,5) %}
+					<div class="map{% if loop.first %} is-open{% endif %}" data-tabs-container="tab-{{ loop.index }}"><iframe src="https://yandex.ua/map-widget/v1/-/CBFc76c0XC" width="560" height="400" frameborder="0"></iframe>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=7a9648bf-398b-4673-ad66-512ef28875ce&lang=ru_RU" type="text/javascript"></script></div>
+					{% endfor %}
+				</div>
 				<!-- begin map -->
-				<div class="map js-map"></div>
+				
 				<!-- end map -->
+				<div class="tabs__wrap js-tabs-slider" data-tabs-wrapper>
+				</div>
 				<!-- begin addresses -->
 				<div class="addresses">
 					<div class="addresses__row row">
 						{% for i in range(0,5) %}
 						<div class="addresses__col col col-4 col-sm-6 col-xs-12">
 							<!-- begin address -->
-							<div class="address{% if loop.first %} is-active{% endif %}">
+							<div class="address{% if loop.first %} is-active{% endif %}" data-tabs-control="tab-{{ loop.index }}">
 								<div class="address__metro">
 									<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
 									    <title>Metro</title>

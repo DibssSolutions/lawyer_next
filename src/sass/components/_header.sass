@@ -49,12 +49,9 @@
 				background-color: transparent
 	&__center
 		padding: 0 20px
-		margin-left: 8%
 		align-items: center
 		flex-wrap: wrap
 		display: flex
-		+lg
-			margin-left: 0
 		+sm
 			padding: 0
 			order: 1
@@ -64,6 +61,8 @@
 			order: 2
 			margin-right: 15px
 			margin-left: auto
+		+r(360)
+			display: none
 	&__btn-md
 		margin-top: 30px
 		display: none
@@ -90,7 +89,7 @@
 	&__mail
 		&:not(:first-child)
 			margin-left: 50px
-			+md
+			+lg
 				margin-left: 30px
 	&__logo
 		&:not(:first-child)
@@ -141,6 +140,40 @@
 .search
 	position: relative
 	font-size: 0
+	border: 1px solid
+	border-radius: 6px
+	vertical-align: top
+	display: inline-flex
+	&.is-open
+		.search__input
+			width: 185px
+			border-right: 1px solid $black
+			+lg
+				width: 130px
+			+sm
+				width: 80px
+	&__input
+		flex-grow: 1
+		border-right: 1px solid transparent
+		width: 0
+		transition: width .3s, border-color .3s
+		input
+			padding: 0 15px
+			height: 48px
+			+fmt
+			font-size: 12px
+			font-weight: 600
+			color: $black
+			width: 100%
+			display: inline-block
+			background-color: transparent
+			+md
+				height: 33px
+			&::placeholder
+				color: $black
+			&:focus
+				&::placeholder
+					font-size: 0
 	&__btn
 		width: 50px
 		height: 50px
@@ -150,7 +183,6 @@
 		font-size: 0
 		color: currentColor
 		background-color: transparent
-		border: 1px solid
 		display: inline-block
 		+md
 			height: 35px
@@ -170,7 +202,7 @@
 	width: 217px
 	vertical-align: top
 	display: inline-block
-	+md
+	+lg
 		width: 130px
 	h1
 		display: none
@@ -254,5 +286,8 @@
 	transition: color .3s
 	+hover
 		color: #6A81DF
+	&.is-active
+		+f(16px,600,1.18)
+		color: $mainColor
 	.accordion_header.is-open &
 		color: #6A81DF
